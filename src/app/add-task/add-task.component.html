@@ -1,0 +1,22 @@
+<h2 mat-dialog-title>Add New Task</h2>
+
+<mat-dialog-content>
+  <mat-form-field>
+    <input matInput #naziv placeholder="Title">
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+    <textarea matInput #opis placeholder="Description"></textarea>
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+    <input matInput #datum [matDatepicker]="dp3" placeholder="Input disabled" disabled style="visibility: hidden">
+    <mat-datepicker-toggle matSuffix [for]="dp3"></mat-datepicker-toggle>
+    <mat-datepicker #dp3 disabled="false"></mat-datepicker>
+  </mat-form-field>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-raised-button (click)="saveData(naziv,opis,datum)">Save</button>
+</mat-dialog-actions>

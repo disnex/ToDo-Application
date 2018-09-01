@@ -1,0 +1,15 @@
+<h2 mat-dialog-title style="text-align:center">{{task.title}}</h2>
+
+<mat-dialog-content>
+  <span>Title: {{task.title}}</span>
+  <br>
+  <span>Description: </span>
+  <p>{{task.description}}</p>
+  <br>
+  <span>Done Until: {{task.finishUntil}}</span>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-raised-button (click)="saveData(naziv,opis,datum)">Save</button>
+</mat-dialog-actions>
